@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #252525;
+    color: #f0efef;
+}
+
+.header-container {
+    display: flex;
+    padding: 1rem 1.6rem 1rem 1.6rem;
+    background-color: #131313;
+}
+
+.header-inner {
+    align-items: center;
+}
+
+.header-logo {
+    width: 128px;
+    height: 22.67px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: left;
+    background-color: #252525;
+    color: #f0efef;
+    padding: 6rem 15rem 4rem 15rem;
+}
+
+.main-inner {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.title-container {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #8d824d;
+    gap: 0.5rem;
+}
+
+#budget-title {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#budget-subtitle {  
+    font-size: 18px;
+}
+
+.subject-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 30px;
+    gap: 0.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 2px solid #807c6b;
+}
+
+.subject-title {
+    font-size: 20px;
+}
+
+.subject-subtitle {
+    font-size: 18px;
+}
+
+.income-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 20px;
+}
+
+.income-form-container label {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fcfcfc;
+}
+
+.income-form-container input {
+    width: 60%;
+    font-family: Arial;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: #2e2e2e;
+    color: #e5d689;
+    border: 1px solid #bebebe;
+    outline: none;
+    border-radius: 7px;
+    padding: 1.2rem;
+}
+
+.expenses-block-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 1.5rem;
+}
+
+.fixed-expenses-block, 
+.smaller-fixed-expenses-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #807c6b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    background-color: #2e2e2e;
+    gap: 1rem;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    justify-content: flex-start;
+    gap: 0.3rem;
+}
+
+.fixed-expense-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.fixed-expenses-block-title {
+    font-size: 24px;
+    color: #dad1a9;
+}
+
+.fixed-expenses-block label,
+.smaller-fixed-expenses-block label {
+    font-size: 16px;
+    text-align: center;
+    height: 40px; /* Trava a altura do texto em até 2 linhas para não desalinhar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed-expenses-block input,
+.smaller-fixed-expenses-block input {
+    width: 70%;    
+    font-size: 16px;
+    text-align: center;
+    background-color: #2e2e2e;
+    border: 1px solid #bebebe;
+    border-radius: 7px;
+    outline: none;
+    padding: 0.5rem;
+    color: #cf97ac;
+}
+
+.variable-expenses-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid #807c6b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    background-color: #2e2e2e;
+}
+
+.variable-expenses-block label {
+    font-size: 16px;
+}
+
+.variable-expenses-block input {
+    width: 70%;   
+    font-size: 16px;
+    text-align: center;
+    background-color: #2e2e2e;
+    border: 1px solid #bebebe;
+    border-radius: 7px;
+    outline: none;
+    padding: 0.5rem;
+    color: #cf97ac;
+}
+
+.variable-expense-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.add-expenses-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #807c6b;
+    border-radius: 12px;
+    background-color: #2e2e2e;
+}
+
+#add-expense-icon {
+    height: 35px;
+    width: 35px;
+}
+
+#add-expense-title {
+    font-size: 15px;
+}
+
+.add-expenses-block button {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 0 0.5rem 0;
+    border: 1px solid #807c6b;
+    border-radius: 7px;
+    background-color: #262341;
+    color: #ffffff;
+}
+
+.add-expenses-block button:hover {
+    border: 1px solid #fffffd;
+    background-color: #4c4680;
+    text-decoration: underline;
+    box-shadow: -30px 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.add-expenses-block button:active {
+    border: 1px solid #807c6b;
+    background-color: #262341;
+    text-decoration: none;
+}
+
+.custom-expenses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.custom-expense-item {
+    box-sizing: border-box;
+    width: calc((100% - 7.5rem) / 6);
+    flex: none;
+}
+
+#add-expense-wrapper {
+    flex: 1;
+    min-width: 200px;
+}
+
+.balance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 20px;
+}
+
+.balance-container label {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fcfcfc;
+}
+
+.balance-container output {
+    width: 60%;
+    font-family: Arial;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: #2e2e2e;
+    color: #b8b6b6;
+    border: 1px solid #bebebe;
+    outline: none;
+    border-radius: 7px;
+    padding: 1.2rem;
+}
+
+.balance-container output.balance-negative {
+    color: #e57373;
+}
+
+.balance-container output.balance-neutral {
+    color: #b8b6b6;
+}
+
+.balance-container output.balance-positive {
+    color: #89e595;;
+}
+
+.investment-block-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 1.5rem;
+}
+
+.portfolio-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    background-color: #2e2e2e;
+}
+.portfolio-icon {
+    height: 50px;
+    width: 50px;
+}
+ 
+.portfolio-block-title {
+    font-size: 24px;
+    color: #dad1a9;
+}
+ 
+.portfolio-chart-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+ 
+.portfolio-total-wrap {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    pointer-events: none;
+}
+ 
+.portfolio-total-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #a09a86;
+}
+ 
+.portfolio-total {
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e5d689;
+    background: none;
+    border: none;
+}
+ 
+.portfolio-legend {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+ 
+.portfolio-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+}
+ 
+.portfolio-row .portfolio-swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+ 
+.portfolio-row .portfolio-name {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f0efef;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid transparent;
+}
+ 
+.portfolio-row .portfolio-name:focus {
+    border-bottom: 1px solid #807c6b;
+}
+ 
+.portfolio-row .portfolio-pct {
+    font-size: 12px;
+    color: #a09a86;
+    min-width: 40px;
+    text-align: right;
+}
+ 
+.portfolio-row .portfolio-value {
+    width: 110px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #252525;
+    border: 1px solid #bebebe;
+    border-radius: 7px;
+    outline: none;
+    padding: 0.4rem;
+    color: #cf97ac;
+}
+ 
+.portfolio-row .portfolio-remove {
+    background: none;
+    border: none;
+    color: #a09a86;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0.2rem 0.3rem;
+}
+ 
+.portfolio-row .portfolio-remove:hover {
+    color: #cf6a6a;
+}
+ 
+.add-asset-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding: 0.6rem 0;
+    border: 1px solid #807c6b;
+    border-radius: 7px;
+    background-color: #262341;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+}
+ 
+.add-asset-btn:hover {
+    border: 1px solid #fffffd;
+    background-color: #4c4680;
+    text-decoration: underline;
+}
+ 
+.add-asset-btn:active {
+    border: 1px solid #807c6b;
+    background-color: #262341;
+    text-decoration: none;
+}
+ 
+#add-asset-icon {
+    height: 18px;
+    width: 18px;
+}
+
+.asset-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 1rem;
+}
+
+.asset-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #807c6b;
+    border-radius: 12px;
+    padding: 1rem;
+    background-color: #2e2e2e;
+}

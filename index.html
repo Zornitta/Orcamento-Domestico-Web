@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Doméstico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./svg/calculator.svg">
+</head>
+<body>
+    <div class="header-container">
+        <header class="header-inner">
+            <img class="header-logo" src="./svg/AUVP_HORIZONTAL.svg" alt="AUVP Logo">
+        </header>
+    </div>
+    <div class="main-container">
+        <main class="main-inner">
+            <div class="title-container">
+                <h2 id="budget-title">Orçamento Doméstico</h2>
+                <p id="budget-subtitle">Controle seu orçamento doméstico com base nos seus lançamento.</p>
+            </div>
+            <div id="income-container" class="subject-container">
+                <h3 class="subject-title">1. Renda Mensal</h3>
+                <p class="subject-subtitle">Preencha os campos conforme sua renda mensal:</p>
+                <div class="income-form-container">
+                    <label>Renda (R$):</label>
+                    <input type="text" inputmode="numeric" name="income" id="income" placeholder="R$0,00">
+                </div>
+            </div>
+            <div id="fixed-expenses-container" class="subject-container">
+                <h3 class="subject-title">2. Despesas Fixas</h3>
+                <p class="subject-subtitle">Preencha conforme seus gastos mensais fixos:</p>
+                
+                <div class="expenses-block-container">
+                    <div class="fixed-expenses-block">
+                        <img class="fixed-expense-icon" src="./svg/house-icon.svg" alt="house-icon">
+                        <h4 class="fixed-expenses-block-title">Despesas de Moradia</h4>
+                        
+                        <div class="input-row">
+                            <label for="housing-cost">Aluguel ou Prestação da Moradia:</label>
+                            <input type="text" inputmode="numeric" name="housing-cost" id="housing-cost" placeholder="R$0,00">
+                        </div>
+
+                        <div class="input-row">
+                            <label for="energy-cost">Enérgia Mensal:</label>
+                            <input type="text" inputmode="numeric" name="energy-cost" id="energy-cost" placeholder="R$0,00">
+                        </div>
+
+                        <div class="input-row">
+                            <label for="water-cost">Água/Esgoto Mensal:</label>
+                            <input type="text" inputmode="numeric" name="water-cost" id="water-cost" placeholder="R$0,00">
+                        </div>
+
+                        <div class="input-row">
+                            <label for="internet-cost">Internet Mensal:</label>
+                            <input type="text" inputmode="numeric" name="internet-cost" id="internet-cost" placeholder="R$0,00">
+                        </div>
+                    </div>
+
+                    <div class="fixed-expenses-block">
+                        <img class="fixed-expense-icon" src="./svg/insurance-protection-icon.svg" alt="insurance-icon">
+                        <h4 class="fixed-expenses-block-title">Despesas Diversas</h4>
+
+                        <div class="input-row">
+                            <label for="education-cost">Educação:</label>
+                            <input type="text" inputmode="numeric" name="education-cost" id="education-cost" placeholder="R$0,00">
+                        </div>
+
+                        <div class="input-row">
+                            <label for="health-insurance-cost">Plano de Saúde:</label>
+                            <input type="text" inputmode="numeric" name="health-insurance-cost" id="health-insurance-cost" placeholder="R$0,00">
+                        </div>
+
+                        <div class="input-row">
+                            <label for="gym-membership-cost">Mensalidade Acadêmia | Esporte:</label>
+                            <input type="text" inputmode="numeric" name="gym-membership-cost" id="gym-membership-cost" placeholder="R$0,00">
+                        </div>
+
+                        <div class="input-row">
+                            <label for="streaming-cost">Assinaturas Mensais:</label>
+                            <input type="text" inputmode="numeric" name="streaming-cost" id="streaming-cost" placeholder="R$0,00">
+                        </div>
+                    </div>
+
+                    <div class="smaller-fixed-expenses-block">
+                        <img class="fixed-expense-icon" src="./svg/car-icon.svg" alt="car-icon">
+                        <h4 class="fixed-expenses-block-title">Despesas de Locomoção</h4>
+                        
+                        <div class="input-row">
+                            <label for="transportation-cost">Parcela Financiamento | Passagens:</label>
+                            <input type="text" inputmode="numeric" name="transportation-cost" id="transportation-cost" placeholder="R$0,00">
+                        </div>
+
+                        <div class="input-row">
+                            <label for="car-insurance-cost">Seguro do Veículo:</label>
+                            <input type="text" inputmode="numeric" name="car-insurance-cost" id="car-insurance-cost" placeholder="R$0,00">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="variable-expenses-container" class="subject-container">
+                <h3 class="subject-title">3. Despesas Variáveis:</h3>
+                <p class="subject-subtitle">Preencha conforme seu gasto mensal variável:</p>
+
+                
+
+                <div class="expenses-block-container">
+
+                    <div class="variable-expenses-block">
+                        <img class="variable-expense-icon" src="./svg/groceries.svg" alt="groceries icon">
+                        <h4 class="variable-expense-block-title">Despesas Alimentação</h4>
+                        
+                        <label for="groceries-cost">Supermercado:</label>
+                        <input type="text" inputmode="numeric" name="groceries-cost" id="groceries-cost" placeholder="R$0,00">
+
+                        <label for="restaurant-cost">Restaurante | Delivery:</label>
+                        <input type="text" inputmode="numeric" name="restaurant-cost" id="restaurant-cost" placeholder="R$0,00">
+                    </div>                    
+
+                    <div class="variable-expenses-block">
+                        <img class="variable-expense-icon" src="./svg/gas-station-icon.svg" alt="gas-station-icon">
+                        <h4 class="variable-expense-block-title">Transporte</h4>
+
+                        <label for="fuel-cost">Combustível:</label>
+                        <input type="text" inputmode="numeric" name="fuel-cost" id="fuel-cost" placeholder="R$0,00">
+
+                        <label for="parking-cost">Estacionamento:</label>
+                        <input type="text" inputmode="numeric" name="parking-cost" id="parking-cost" placeholder="R$0,00">
+
+                    </div>
+
+                    <div class="variable-expenses-block">
+                        <img class="variable-expense-icon" src="./svg/adjustable wrench.svg" alt="maintenance-icon">
+                        <h4 class="variable-expense-block-title">Manutenção:</h4>
+                    
+                        <label for="vehicle-maintenance-cost">Manutenção de Veículos:</label>
+                        <input type="text" inputmode="numeric" name="vehicle-maintenance-cost" id="vehicle-maintenance-cost" placeholder="R$0,00">
+
+                        <label for="house-maintenance-cost">Manutenção da Habitação | Reformas :</label>
+                        <input type="text" inputmode="numeric" name="house-maintenance-cost" id="house-maintenance-cost" placeholder="R$0,00">
+
+                    </div>
+                </div>
+
+                <div class="expenses-block-container">
+
+                    <div class="variable-expenses-block">
+                        <img class="variable-expense-icon" src="./svg/leisure-icon.svg" alt="leisure-icon">
+                        <h4 class="variable-expense-block-title">Lazer e Entreterimento</h4>
+
+                        <label for="leisure-cost">Lazer:</label>
+                        <input type="text" inputmode="numeric" name="leisure-cost" id="leisure-cost" placeholder="R$0,00">
+
+                        <label for="turism-cost">Turismo:</label>
+                        <input type="text" inputmode="numeric" name="turism-cost" id="turism-cost" placeholder="R$0,00">
+                    
+                    </div>
+
+                    <div class="variable-expenses-block">
+                        <img class="variable-expense-icon" src="./svg/well-being.svg" alt="well-being-icon">
+                        <h4 class="variable-expense-block-title">Cuidados Pessoais e Bem Estar</h4>
+
+                        <label for="clothing-cost">Vestuário e Acessórios:</label>
+                        <input type="text" inputmode="numeric" name="clothing-cost" id="clothing-cost" placeholder="R$0,00">
+
+                        <label for="beauty-cost">Cabelereiro e Estética:</label>
+                        <input type="text" inputmode="numeric" name="beauty-cost" id="beauty-cost" placeholder="R$0,00">
+
+                    </div>
+
+                    <div class="variable-expenses-block">
+                        <img class="variable-expense-icon" src="./svg/medicine-icon.svg" alt="medicine-icon">
+                        <h4 class="variable-expense-block-title">Saúde</h4>
+
+                        <label for="medicines-cost">Remédios:</label>
+                        <input type="text" inputmode="numeric" name="medicines-cost" id="medicines-cost" placeholder="R$0,00">
+
+                        <label for="hospital-cost">Emergências:</label>
+                        <input type="text" inputmode="numeric" name="hospital-cost" id="hospital-cost" placeholder="R$0,00">
+                    </div>
+                </div>
+
+                <div id="custom-expenses-container" class="custom-expenses-grid">
+    
+                <div class="add-expenses-block" id="add-expense-wrapper">
+                    <button id="add-expense">
+                        <img id="add-expense-icon" src="./svg/plus-icon.svg" alt="plus-icon">
+                        <h4 id="add-expense-title">ADICIONAR GASTO</h4>
+                    </button>
+                </div>
+            </div>
+            </div>
+
+            <div id="investment-container" class="subject-container">
+                <h3 class="subject-title">4. Investimentos:</h3>
+                <p class="subject-subtitle">Decida quanto e onde deseja investir seu dinheiro:</p>
+            
+                <div class="balance-container">
+                    <label>Saldo (R$):</label>
+                    <output>R$0,00</output>
+                </div>
+
+                <div class="investment-block-container">
+                    <div class="portfolio-block">
+                        <img class="portfolio-icon" src="./svg/pie-chart-icon.svg" alt="pie-chart-icon">
+                        <h4 class="portfolio-block-title">Patrimônio Acumulado</h4>
+ 
+                        <div class="portfolio-chart-wrap">
+                            <svg id="portfolio-chart" viewBox="0 0 200 200" width="180" height="180" role="img" aria-label="Distribuição da carteira de investimentos"></svg>
+                            <div class="portfolio-total-wrap">
+                                <span class="portfolio-total-label">total</span>
+                                <output id="portfolio-total" class="portfolio-total">R$0,00</output>
+                            </div>
+                        </div>
+ 
+                        <div class="portfolio-legend" id="portfolio-legend">
+                            <!-- ativos gerados via js/investments.js -->
+                        </div>  
+                    </div>
+
+
+                    <!-- Funcionalidade Postergada -->
+
+
+                    <!-- <div class="portfolio-block">
+                        <img class="portfolio-icon" src="./svg/investment-icon.svg" alt="investiment-icon">
+                        <h4 class="portfolio-block-title">Investir:</h4>
+
+                        <div class="asset-container">
+                            <div class="asset-block">
+                                
+                            </div>
+                        </div>
+
+                        <button type="button" id="add-asset" class="add-asset-btn">
+                            <img id="add-asset-icon" src="./svg/plus-icon.svg" alt="plus-icon">
+                            <span>ADICIONAR ATIVO</span>
+                        </button>
+                    </div> -->
+                </div>
+            
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
