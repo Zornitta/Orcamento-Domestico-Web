@@ -1,2 +1,2 @@
-# Or-amento-Dom-stico---Web
+# Orcamento-Domestico---Web
 Atividade para criar um controlador de orçamento doméstico em Javascript.
